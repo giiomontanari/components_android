@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:id="@+id/constraintLayout"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/buttonToastme"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Toast me"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <Button
+        android:id="@+id/buttonSnackme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Snack me"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/buttonToastme"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <Spinner
+        android:id="@+id/spinnerWeight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="10dp"
+        android:entries="@array/weight_array"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSnackme"/>
+
+    <Spinner
+        android:id="@+id/spinnerDynamic"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerWeight"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutSpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerDynamic">
+
+        <Button
+            android:id="@+id/buttonGetSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Get Spinner"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/buttonSetSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Set Spinner"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonProgress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Progress"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutSpinner"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+    
+    <SeekBar
+        android:id="@+id/seekValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:max="20"
+        app:layout_constraintTop_toBottomOf="@+id/buttonProgress"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:id="@+id/textSeekValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="seekbar value"
+        app:layout_constraintTop_toBottomOf="@+id/seekValue"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutSeek"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/textSeekValue">
+
+        <Button
+            android:id="@+id/buttonGetSeek"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Get Seek"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/buttonSetSeak"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Set Seek"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
